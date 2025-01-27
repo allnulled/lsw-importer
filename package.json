@@ -2,11 +2,12 @@
   "name": "lsw-importer",
   "version": "1.0.0",
   "description": "Importer tool for Lite Starter Webkit.",
-  "main": "index.js",
+  "main": "importer.js",
   "scripts": {
     "build": "echo 'no building for @allnulled/lsw-importer'",
     "versionate": "echo 'no versionate for @allnulled/lsw-importer'",
-    "test": "echo 'no test for @allnulled/lsw-importer'"
+    "test": "echo 'no test for @allnulled/lsw-importer'",
+    "test-browser": "npx http-server -c-1 . -o"
   },
   "keywords": [],
   "author": "allnulled",
