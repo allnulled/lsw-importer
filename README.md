@@ -1,11 +1,13 @@
-# importer
+# lsw-importer
 
 Import JavaScript, CSS and text easily.
+
+Branch from [@allnulled/importer](https://github.com/allnulled/importer).
 
 ## Installation
 
 ```js
-npm install -s @allnulled/importer
+npm install -s @allnulled/lsw-importer
 ```
 
 ## Usage
@@ -13,7 +15,7 @@ npm install -s @allnulled/importer
 ### 1) Import from HTML:
 
 ```html
-<script src="node_modules/@allnulled/importer/importer.js"></script>
+<script src="node_modules/@allnulled/lsw-importer/importer.js"></script>
 ```
 
 ### 2) Signature of the API:
