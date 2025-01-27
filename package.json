@@ -9,6 +9,6 @@
     "test": "echo 'no test for @allnulled/lsw-importer'"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "allnulled",
+  "license": "WTFPL"
 }
