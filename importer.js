@@ -146,7 +146,7 @@ const Importer = class {
       if(!this.options.update_ui) {
         return;
       }
-      const htmlLoaderBar = document.querySelector(this.id_loader_bar);
+      const htmlLoaderBar = document.querySelector(this.id_loader + " " + this.id_loader_bar);
       const percentageCompleted = Math.round((this.modules_loaded / this.modules_total) * 100);
       htmlLoaderBar.style.width = percentageCompleted + "%";
     } catch (error) {
@@ -172,7 +172,7 @@ const Importer = class {
           if(intersitial) {
             intersitial.remove();
           } else {
-            console.log("Calling to $removeIntersitial when there is not such");
+            console.log("Cannot remove intersitial. Insert «" + this.id + "» to skip this warning");
           }
         }, this.options.update_ui_minimum_milliseconds);
       } else {
