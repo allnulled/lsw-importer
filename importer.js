@@ -58,6 +58,7 @@ const Importer = class {
     }
     this.modules_total = total_modules;
     this.modules_loaded = -1;
+    this.modules_loaded_ids = [];
     this.time_of_creation = new Date();
     this.is_loaded = false;
     this.setTotal();
@@ -118,8 +119,13 @@ const Importer = class {
   $increaseLoadedModules(moduleType = "unknown", moduleId = "unknown") {
     this.$trace("$increaseLoadedModules", arguments);
     try {
-      console.log(`[OK][Importer] Loaded «${moduleId}» as «${moduleType}» ${this.$getMillisecondsOfLife()}`);
       ++this.modules_loaded;
+      const isRepeated = this.modules_loaded_ids.indexOf(moduleId) !== -1;
+      if(isRepeated) {
+        throw new Error("Repeated module load: " + moduleId);
+      }
+      this.modules_loaded_ids.push(moduleId);
+      console.log(`[OK][Importer] Loaded module «${this.modules_loaded}» named «${moduleId}» as «${moduleType}» ${this.$getMillisecondsOfLife()}`);
       if(!this.options.update_ui) {
         return;
       }
